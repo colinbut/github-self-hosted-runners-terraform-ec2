@@ -19,7 +19,7 @@ resource "aws_instance" "github_runner" {
   instance_type = var.instance_type
   key_name      = var.key_name
 
-  user_data = templatefile("${path.cwd}/bootstrap.tmpl", {})
+  user_data = templatefile("${path.cwd}/bootstrap.tmpl", { github_repo_url = var.github_repo_url, github_repo_pat_token = var.github_repo_pat_token })
 
   tags = {
     Name = "github_runner"
