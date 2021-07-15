@@ -16,8 +16,4 @@ cd /home/ec2-user
 mkdir actions-runner && cd actions-runner
 curl -o actions-runner-linux-x64-2.278.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.278.0/actions-runner-linux-x64-2.278.0.tar.gz
 tar xzf ./actions-runner-linux-x64-2.278.0.tar.gz
-./config.sh --url ${github_repo_url} --token ${github_repo_pat_token}
-
-# run runner app on startup
-sudo ./svc.sh install
-sudo ./svc.sh start
+./config.sh --url ${github_repo_url} --token ${github_repo_pat_token} --name ${runner_name} --work _work --labels ${labels} --runasservice

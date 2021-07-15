@@ -22,3 +22,13 @@ variable "github_repo_pat_token" {
   description = "The GitHub Repo Pat Token that would be used by the GitHub Runner to authenticate with the GitHub Repo"
   type        = string
 }
+
+variable "runner_name" {
+  description = "The name to give to the GitHub Runner so you can easily identify it"
+  type        = string
+}
+
+variable "labels" {
+  description = "A list of additional labels to attach to the runner instance"
+  type        = list(string)
+}
