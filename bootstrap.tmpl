@@ -1,0 +1,10 @@
+#!/bin/bash
+yum update -y
+
+# install docker
+amazon-linux-extras install -y docker
+service docker start
+usermod -a -G docker ec2-user
+
+# install git
+yum install git make -y
