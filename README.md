@@ -20,7 +20,7 @@ An example `locals.auto.tfvars` is given below:
 ami                   = "ami-03ac5a9b225e99b02" # Amazon Linux 2 AMI for eu-west-2 (London)
 instance_type         = "t2.micro"
 key_name              = # your KeyPair name
-github_repo_pat_token = The GitHub Repository's Pat Token for which you want to register GitHub Runners with to authenticate
+github_repo_pat_token = # The GitHub Repository's Pat Token for which you want to register GitHub Runners with to authenticate
 github_repo_url       = "https://github.com/{owner}/{repo}"
 runner_name           = "gitHub-repo-runner"
 labels                = ["dev", "ui", "frontend"]
