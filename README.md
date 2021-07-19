@@ -28,6 +28,13 @@ labels                = ["dev", "ui", "frontend"]
 
 where owner and repo represents the GitHub Account Owner & Repository respectively.
 
+## Information
+
+### VPC
+Note that by design not launching the EC2 Auto Scaling Group in a VPC simply because i want this GitHub Runners project to contain an independent GitHub Runner that can be launched directly into any VPC if needed. Since after all the aim of this Repository Project is to demonstrate the construction of GitHub Self Hosted Runners on EC2 instances.
+
+As a result, this project enables the spinning up of a very simplistic EC2 Instance to act as a GitHub Self Hosted Runner. It is left to any future reader/user/forker of this Repository to tailor it accordingly to their own needs.
+
 ## Authors
 
 Colin But
