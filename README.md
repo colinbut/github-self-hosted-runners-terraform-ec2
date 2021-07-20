@@ -4,6 +4,18 @@ This is a Terraform repository that contains Terraform code to spin up an EC2 In
 
 ## Usage
 
+In order to use this Repository to construct your GitHub Self Hosted Runners for a given GitHub Repository; you will first require to generate a GitHub "PAT" token for which this token will be used by the GitHub Self Hosted Runners (EC2 Instances) to authenticate on your behalf to the GitHub Repository you wanted the GitHub Self Hosted Runners to run your GitHub Actions Workflows.
+
+This can be easily done by following this guide:
+https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+If you are the owner of the GitHub Repository for which you want to setup GitHub Self Hosted Runners for then no further action on the GitHub side is required.
+Otherwise, if you're not the owner of the GitHub Repository you need to be added to the GitHub Repository as an "outside collaborator" with the appropriate priviledges. Instructions can be found here: https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/adding-outside-collaborators-to-repositories-in-your-organization
+
+In full, the owner of the PAT token will need to have the appropriate rights to the GitHub Repository you are trying to setup GitHub Self Hosted Runners for using this Repository.
+
+Once you configured the PAT token and connected your GitHub Repository to the PAT token owner (as described above); you can then proceed as follows to continue with setting up this GitHub Self Hosted Runners Repository by executing the standard Terraform workflow to provision the GitHub Self Hosted Runners infrastructure resources on AWS Cloud.
+
 ```bash
 terraform init
 terraform plan
@@ -27,6 +39,8 @@ labels                = ["dev", "ui", "frontend"]
 ```
 
 where owner and repo represents the GitHub Account Owner & Repository respectively.
+
+
 
 ## Information
 
