@@ -32,3 +32,27 @@ variable "labels" {
   description = "A list of additional labels to attach to the runner instance"
   type        = list(string)
 }
+
+variable "health_check_grace_period" {
+  description = "The health check grace period"
+  type        = number
+  default     = 600
+}
+
+variable "desired_capacity" {
+  description = "The desired number of EC2 instances in the AutoScaling Group"
+  type        = number
+  default     = 1
+}
+
+variable "min_size" {
+  description = "The Minimum number of EC2 instances in the AutoScaling Group"
+  type        = number
+  default     = 1
+}
+
+variable "max_size" {
+  description = "The Maximum number of EC2 instances in the AutoScaling Group"
+  type        = number
+  default     = 1
+}
