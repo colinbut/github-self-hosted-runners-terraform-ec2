@@ -36,9 +36,16 @@ github_repo_pat_token = # The GitHub Repository's Pat Token for which you want t
 github_repo_url       = "https://github.com/{owner}/{repo}"
 runner_name           = "gitHub-repo-runner"
 labels                = ["dev", "ui", "frontend"]
+
+health_check_grace_period = 600
+desired_capacity          = 3
+min_size                  = 1
+max_size                  = 4
 ```
 
 where owner and repo represents the GitHub Account Owner & Repository respectively.
+
+In above example i have the desired capacity of 3 for the number of instances in the Auto Scaling Group to denote how many desired runner instances i want for my GitHub Repository where i also set the minimum and maximum too.
 
 
 
