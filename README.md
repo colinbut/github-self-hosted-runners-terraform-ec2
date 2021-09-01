@@ -2,6 +2,9 @@
 
 This is a Terraform repository that contains Terraform code to spin up an EC2 Instance acting as the GitHub Self Hosted Runner for a particular GitHub Repository.
 
+## Solution Architecture
+
+![GitHubSelfHostedRunnersEC2](docs/GitHubSelfHostedRunnersSolutionArchitecture.png)
 ## Usage
 
 In order to use this Repository to construct your GitHub Self Hosted Runners for a given GitHub Repository; you will first require to generate a GitHub "PAT" token for which this token will be used by the GitHub Self Hosted Runners (EC2 Instances) to authenticate on your behalf to the GitHub Repository you wanted the GitHub Self Hosted Runners to run your GitHub Actions Workflows.
