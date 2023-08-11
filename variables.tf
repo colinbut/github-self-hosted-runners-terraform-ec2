@@ -56,3 +56,25 @@ variable "max_size" {
   type        = number
   default     = 1
 }
+
+variable "subnet_ids" {
+  description = "Subnet IDs to for the runners"
+  type = list(string)
+}
+
+variable "vpc" {
+  description = "VPC for the runners"
+  type = string
+}
+
+variable "ami_filter_name" {
+  description = "Filter value for AMI name"
+  type = string
+  default = "amzn2-ami-hvm-*"
+}
+
+variable "ami_architecture" {
+  description = "CPU Arch for AMI filter"
+  type = list(string)
+  default = [ "x86_64" ]
+}
